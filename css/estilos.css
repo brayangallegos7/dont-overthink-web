@@ -1,0 +1,105 @@
+body{
+    background-color: gainsboro;
+}
+.cat {
+    height: 780px;
+    /*background-color: #C9CBCE;*/
+}
+
+    .cat div {
+        float: left;
+        width: 29%;
+        margin: 2% 2.07% 0% 2.07%;
+        height: 350px;
+    }
+
+    .cat img {
+        width: 350px;
+        height: 280px;
+        display: block;
+        margin: auto;
+        padding: 0px;
+    }
+
+        .cat img:hover {
+            width: 360px;
+            height: 290px;
+            transition-duration: .8s;
+        }
+
+a {
+    text-decoration: none;
+}
+h4,h1 {
+    text-align: center;
+    font-family: Helvetica;
+    color: black;
+   
+}
+h5,h3 {
+    text-align: center;
+    font-family: Helvetica;
+    color: gray;
+}
+
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.copyright-text{
+  position: relative;
+  left:300px;
+}

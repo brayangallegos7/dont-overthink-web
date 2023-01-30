@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estiloslogin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login</title>
+</head>
+
+<body>
+
+    <p>Registrarse</p>
+    
+        <input type="email" id="login" placeholder="correo">
+        <input type="password" id="pass" placeholder="contraseña">
+        <button id="submit"> enviar</button>
+    
+   
+
+    <p>iniciar sesión</p>
+    <input type="email" id="emaillogin" placeholder="correo">
+    <input type="password" id="passlogin" placeholder="contraseña">
+    <button id="submitlogin"> enviar</button>
+    
+    
+    
+   <!-- <div class="container-form sign-up">
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido a TheBikeShop</h2>
+                <p>¿ya tienes una cuenta? inicia sesión aqui</p>
+                <button class="sign-up-btn">Iniciar Sesion</button>
+            </div>
+        </div>
+        <form id="signup-form" class="formulario">
+            <h2 class="create-account">Crear una cuenta</h2>
+            <div class="iconos">
+                <div class="border-icon">
+                    <i class='bx bxl-instagram'></i>
+                </div>
+                <div class="border-icon">
+                    <i class='bx bxl-linkedin' ></i>
+                </div>
+                <div class="border-icon">
+                    <i class='bx bxl-facebook-circle' ></i>
+                </div>
+            </div>
+            <p class="cuenta-gratis">Crear una cuenta gratis</p>
+            <input type="email" id="email" placeholder="Correo">
+            <input type="password" id="pass" placeholder="Contraseña">
+            <button id="signup" class="btn btn-form"> enviar</button>
+            
+        </form>
+    </div>
+    <div class="container-form sign-in">
+        <form id="login-form"class="formulario">
+            <h2 class="create-account">Iniciar Sesion</h2>
+            <div class="iconos">
+                <div class="border-icon">
+                    <i class='bx bxl-instagram'></i>
+                </div>
+                <div class="border-icon">
+                    <i class='bx bxl-linkedin' ></i>
+                </div>
+                <div class="border-icon">
+                    <i class='bx bxl-facebook-circle' ></i>
+                </div>
+            </div>
+            <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
+            <input type="email" id="emaillogin" placeholder="Email">
+            <input type="password" id="passlogin"placeholder="Contraseña">
+            <button id="submitlogin" class="btn btn-form"> iniciar sesión</button>
+        </form>
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido de nuevo</h2>
+                <p>Si aun no tienes una cuenta registrate aqui</p>
+                <button class="sign-in-btn">Registrarse</button>
+            </div>
+        </div>
+    </div> -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyBIcSJwvMk8Sk3cJCwZWeqTf5JxNs7YNBk",
+          authDomain: "thebikeshop-8792a.firebaseapp.com",
+          projectId: "thebikeshop-8792a",
+          storageBucket: "thebikeshop-8792a.appspot.com",
+          messagingSenderId: "161316754472",
+          appId: "1:161316754472:web:efffb63252e7b09c10511d"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+    // FIREBASE NEW
+
+   /* const signupForm = document.querySelector('#signup-form');
+        signupForm.addEventListener('submit', async (e) =>{
+    e.preventDefault();
+    const email = signupForm['email'].value;
+    const password = signupForm['pass'].value;
+
+        try{
+            const userCredentials = await createUserWithEmailAndPassword(auth,email,password)
+        console.log("Usuario registrado con exito")
+        }catch (error){
+            console.log(error)
+        }
+        })
+
+        const loginForm = document.querySelector('#signup-form');
+        signupForm.addEventListener('submitlogin', async (e) =>{
+    e.preventDefault();
+    const email1 = signupForm['emaillogin'].value;
+    const password1 = signupForm['passlogin'].value;
+
+        try{
+            const userCredentials = await createUserWithEmailAndPassword(auth,email1,password1)
+        console.log("Usuario iniciado con exito")
+        }catch (error){
+            console.log(error)
+        }
+        }) */
+        document.getElementById("submit").addEventListener('click' , function(){
+            const email = document.getElementById("login").value
+            const password = document.getElementById("pass").value
+
+            createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredentials)=>{
+                const user = userCredentials.user;
+                console.log("registrado con exito")
+            })
+            .catch((error)=>{
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode + errorMessage)
+            })
+        })
+
+        document.getElementById("submitlogin").addEventListener('click' , function(){
+            const email1 = document.getElementById("emaillogin").value
+            const password1 = document.getElementById("passlogin").value
+
+            signInWithEmailAndPassword(auth, email1, password1)
+            .then((userCredentials)=>{
+                const user = userCredentials.user;
+                console.log("inicio de sesión con exito")
+            })
+            .catch((error)=>{
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode + errorMessage)
+            })
+        })
+      </script>
+      <script src="./js/signupForm.js"></script>
+</body>
+
+</html>
