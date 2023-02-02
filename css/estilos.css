@@ -10,7 +10,7 @@ body{
         float: left;
         width: 29%;
         margin: 2% 2.07% 0% 2.07%;
-        height: 350px;
+        height: 450px;
     }
 
     .cat img {
@@ -102,4 +102,36 @@ h5,h3 {
 .copyright-text{
   position: relative;
   left:300px;
+}
+
+
+div {
+  margin: 10px;
+}
+
+.mg {
+  width: 30%;
+  height: 340px;
+  display: inline-flex;
+  text-align: center;
+  background-color: green;
+}
+.mg img{
+  height: 240px;
+}
+
+.bg {
+  width: 30%;
+  display: inline-flex;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 500px) {
+
+  .first,
+  .second,
+  .third {
+      width: 70%;
+  }
 }
