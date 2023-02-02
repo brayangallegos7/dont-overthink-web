@@ -1,27 +1,17 @@
 body {
-    background-color: gainsboro;
+    background-color: whitesmoke;
 }
 
 .cat {
     height: 780px;
     /*background-color: #C9CBCE;*/
 }
-
-<<<<<<< HEAD
-    .cat div {
-        float: left;
-        width: 29%;
-        margin: 2% 2.07% 0% 2.07%;
-        height: 450px;
-    }
-=======
 .cat div {
     float: left;
     width: 29%;
     margin: 2% 2.07% 0% 2.07%;
     height: 350px;
 }
->>>>>>> e351b6376bcbf3db0e9e2bb780aef237d319de97
 
 .cat img {
     width: 350px;
@@ -84,8 +74,6 @@ h3 {
     color: #737373;
 }
 
-<<<<<<< HEAD
-
 div {
   margin: 10px;
 }
@@ -115,13 +103,11 @@ div {
   .third {
       width: 70%;
   }
-=======
-<<<<<<< HEAD
 .textotitulos{
 margin-top: 30px;
 color:#26272b;
-font-size: 40px;
-=======
+font-size: 40px;}
+
 .site-footer a:hover {
     color: #3366cc;
     text-decoration: none;
@@ -172,6 +158,4 @@ font-size: 40px;
 
 #color {
     background-color: gainsboro;
->>>>>>> 22ec8a7f089e84d96be002ca69b71e2ea6eb61b0
->>>>>>> e351b6376bcbf3db0e9e2bb780aef237d319de97
 }
