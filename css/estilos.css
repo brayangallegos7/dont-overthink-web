@@ -3,7 +3,7 @@ body {
 }
 
 .cat {
-    height: 780px;
+    height: 450px;
     /*background-color: #C9CBCE;*/
 }
 .cat div {
@@ -94,15 +94,6 @@ div {
   display: inline-flex;
   text-align: center;
 }
-
-
-@media screen and (max-width: 500px) {
-
-  .first,
-  .second,
-  .third {
-      width: 70%;
-  }
 .textotitulos{
 margin-top: 30px;
 color:#26272b;
@@ -155,7 +146,8 @@ font-size: 40px;}
     margin-left: 10%;
     color: black;
 }
-
-#color {
-    background-color: gainsboro;
+.bg1{
+    font-family: Helvetica;
+    text-align: center;
+    color: black;
 }
