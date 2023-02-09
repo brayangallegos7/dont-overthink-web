@@ -17,8 +17,7 @@ onAuthStateChanged(auth, async (user) => {
   if (user) {
     loginCheck(user);
     try {
-      const querySnapshot = await getDocs(collection(db, "posts"));
-      setupPosts(querySnapshot.docs);
+      document.getElementById(user).setAttribute();
     } catch (error) {
       console.log(error)
     }
@@ -27,3 +26,4 @@ onAuthStateChanged(auth, async (user) => {
     loginCheck(user);
   }
 });
+

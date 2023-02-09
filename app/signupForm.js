@@ -10,29 +10,24 @@ signUpForm.addEventListener("submit", async (e) => {
   const password = signUpForm["signup-password"].value;
 
   try {
-    const userCredential = await createUserWithEmailAndPassword(auth, email, password)
-    console.log(userCredential)
-
-    // Close the signup modal
-    const signupModal = document.querySelector('#signupModal');
-    const modal = bootstrap.Modal.getInstance(signupModal);
-    modal.hide();
+    const userCredentials = await createUserWithEmailAndPassword(auth, email, password)
+    console.log(userCredentials)
+    console.log("usuario registrado")
 
     // reset the form
-    signUpForm.reset();
+     signUpForm.reset();
 
     // show welcome message
-    showMessage("Welcome" + userCredentials.user.email);
-
+    showMessage("¡Bienvenido! " + userCredentials.user.email);
   } catch (error) {
     if (error.code === 'auth/email-already-in-use') {
-      showMessage("Email already in use", "error")
+      showMessage("Este correo ya esta en uso", "error")
     } else if (error.code === 'auth/invalid-email') {
-      showMessage("Invalid email", "error")
+      showMessage("Correo invalido, revise el formato de correo.", "error")
     } else if (error.code === 'auth/weak-password') {
-      showMessage("Weak password", "error")
+      showMessage("Contraseña muy corta, inserte al menos 6 caracteres.", "error")
     } else if (error.code) {
-      showMessage("Something went wrong", "error")
+      showMessage("Error, Comuniquese con nosotros.", "error")
     }
   }
 

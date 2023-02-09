@@ -8,6 +8,7 @@ logout.addEventListener("click", async (e) => {
   try {
     await signOut(auth)
     console.log("signup out");
+    setTimeout(()=> location.href="./login.html",500);
   } catch (error) {
     console.log(error)
   }
