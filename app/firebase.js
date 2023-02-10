@@ -2,6 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebas
 import { getAuth } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js"
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js"
 
+
 const firebaseConfig = {
       apiKey: "AIzaSyBIcSJwvMk8Sk3cJCwZWeqTf5JxNs7YNBk",
       authDomain: "thebikeshop-8792a.firebaseapp.com",

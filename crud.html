@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crud</title>
+    <link rel="shortcut icon" href="./images/icono20.png" type="image/x-icon">
+
+    <!-- BOOTSWATCH -->
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/yeti/bootstrap.min.css"
+    />
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/index.html">
+            <img src="/images/logo5.png" alt="Logo" width="200" height="auto" class="d-inline-block align-text-top">
+        </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    </div>    
+    <div class="container">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/login.html">Log in<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/login.html" id=>Log out<span class="sr-only"></span></a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+  <body>
+    <section>
+      <style>
+        section {
+          background-image: url('/images/fondo4.webp');
+        }
+        </style>
+      <!-- ADD TASK -->
+      <div>
+
+      </div>
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-md-6" style="margin: auto;">
+            <div class="card">
+              <div class="card-body">
+                <h1 class="h4" style="text-align: center;">Agregar Articulo</h1>
+  
+                <form id="task-form">
+                  <label for="Categoria"><b>Categoria:</b> </label>
+                  <input
+                    type="text"
+                    id="task-categoria"
+                    class="form-control mb-3"
+                    class="My First Title"
+                    placeholder="Ingrese una categoria"
+                    autofocus
+                  />
+  
+                  <label for="Marca"><b>Marca:</b> </label>
+                  <input
+                    type="text"
+                    id="task-marca"
+                    class="form-control mb-3"
+                    class="My First Title"
+                    placeholder="Ingrese una marca"
+                    autofocus
+                  />
+                  <label for="Modelo"><b>Modelo:</b> </label>
+                  <input
+                    type="text"
+                    id="task-modelo"
+                    class="form-control mb-3"
+                    class="My First Title"
+                    placeholder="Ingrese un modelo"
+                    autofocus
+                  />
+
+                  <label for="Color"><b>Color:</b> </label>
+                  <input
+                    type="text"
+                    id="task-color"
+                    class="form-control mb-3"
+                    class="My First Title"
+                    placeholder="Ingrese un color"
+                    autofocus
+                  />
+
+                  <label for="Precio"><b>Precio:</b> </label>
+                  <input
+                    type="text"
+                    id="task-precio"
+                    class="form-control mb-3"
+                    class="My First Title"
+                    placeholder="Precio"
+                    autofocus
+                  />                 
+                  <button class="btn btn-success" id="btn-task-form">Añadir</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Tasks List -->
+          
+        </div>
+      </div>
+    </section>
+    <main>     
+      <div style="text-align: center;"><h2>TheBikeShop <b>Inventario</b></h2></div>     
+    </main>
+  </body><br>
+  <div id="tasks-container"></div>
+  <script src="./index.js" type="module"></script>
+</html>
