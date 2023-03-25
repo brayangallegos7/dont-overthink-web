@@ -1,7 +1,7 @@
 /* import { signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js"
 import { auth } from "./firebase.js";
 
-const logout = document.querySelector("#logout");
+const logout = document.querySelector("#cerrarSesion");
 
 logout.addEventListener("click", async (e) => {
   e.preventDefault();

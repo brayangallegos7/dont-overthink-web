@@ -47,7 +47,7 @@
               Accesorios
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/">Llantas</a></li>
+              <li><a class="dropdown-item" href="#">Llantas</a></li>
               <li><a class="dropdown-item" href="#">Cascos</a></li>
               <li><a class="dropdown-item" href="#">Rodilleras</a></li>
               <li><a class="dropdown-item" href="#">Guantes</a></li>
@@ -66,10 +66,10 @@
             </ul>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/login.html">Log in<span class="sr-only"></span></a>
+            <a class="nav-link" href="/login.html">Iniciar Sesión<span class="sr-only"></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/login.html" id=>Log out<span class="sr-only"></span></a>
+            <a class="nav-link" href="/login.html" id="cerrarSesion">Cerrar Sesión<span class="sr-only"></a>
           </li>
         </ul>
         
@@ -78,69 +78,127 @@
   </nav>
 </head>
 <body>
+    <div class="presentacion">
+      <h1>Bienvenido a TheBikeShop</h1>
+    </div><br>
+    <div class="presentacion2">
+      <h1>Nuevos Precios en Mountain Bikes</h1>
+    </div>
 
+
+      <section class="contenido">
+        <div class="mostrador" id="mostrador">
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="./images/scott1.png" alt="">
+                    </div>
+                    <p class="descripcion">Spark RC World Cup AXS</p>
+                    <span class="precio">$ 242,800.00</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="/images/scott2.png" alt="">
+                    </div>
+                    <p class="descripcion" id>Spark Rc Comp </p>
+                    <span class="precio">$ 203,800.00</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="/images/scott3.png" alt="">
+                    </div>
+                    <p class="descripcion">Slash 9.9 XX1 Flifht Attendant
+                    </p>
+                    <span class="precio">$ 122,999.00</span>
+                </div>
+                
+            </div>
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="images/trekpng1.png" alt="">
+                    </div>
+                    <p class="descripcion">Slash 9.9 XX1 Flifht Attendant</p>
+                    <span class="precio">$ 122,999.00</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="images/trekpng2.png" alt="">
+                    </div>
+                    <p class="descripcion">Slash 9.7</p>
+                    <span class="precio">$ 82,999.00</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="images/trekpng3.png" alt="">
+                    </div>
+                    <p class="descripcion">Slash 8</p>
+                    <span class="precio">$ 75,999.00</span>
+                </div>
+                
+            </div> 
+        </div>
+        <!-- CONTENEDOR DEL ITEM SELECCIONADO -->
+        <div class="seleccion" id="seleccion">
+            <div class="cerrar" onclick="cerrar()">
+                &#x2715
+            </div>
+            <div class="info">
+                <img src="images/trekpng1.png" alt="" id="img">
+                <h2 id="modelo">Slash 9.9 XX1 Flifht Attendant</h2>
+                <p id="descripcion">Descripción Modelo 1</p>
+
+                <span class="precio" id="precio">$ 75,999.00</span>
+
+                <div class="fila">
+                    <div class="size">
+                        <label for="">Rodado</label>
+                        <select name="" id="">
+                            <option value="">26</option>
+                            <option value="">27.5</option>
+                            <option value="">29</option>
+                        </select>
+                    </div>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+            </div>
+        </div>
+    </section>
     <div id="carouselExampleDark" class="carousel carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-
-        <div class="carousel-inner">
-          <div class="carousel-item active" align="center" data-bs-interval="3000">
-            <img src="/images/trek1.webp" alt="carousel-item"style="width:100%;">
-            <div class="carousel-caption d-none d-md-block">
-            </div>
-          </div>
-
-          <div class="carousel-item" align="center"data-bs-interval="3000">
-            <img src="/images/trek3.jfif" alt="carousel-item"style="width:100%;">
-            <div class="carousel-caption d-none d-md-block">
-            </div>
-          </div>
-
-          <div class="carousel-item" align="center"data-bs-interval="3000">
-            <img src="/images/trek6.webp" alt="carousel-item"style="width:100%;">
-            <div class="carousel-caption d-none d-md-block">
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-          <span class="carousel-control-next-icon"aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-</body>
 
-<section class="cat">
-  <div class="row">
-    <div class="col-xs-12 col-md-4">
-      <a href=""><img src="/images/scott1.png" width="100%"><h4>Spark RC World Cup AXS</h4><h5>$242,800.00</h5></a>
-  </div>
-  <div class="col-xs-12 col-md-4">
-      <a href=""><img src="/images/scott2.png"><h4>Spark Rc Comp</h4><h5>$203,800.00</h5></a>
-  </div>
-  <div class="col-xs-12 col-md-4">
-      <a href=""><img src="/images/scott3.png"><h4>Spark 940</h4><h5>$94,500.00</h3></a>
-  </div>
-  <div class="col-xs-12 col-md-4">
-      <a href=""><img src="images/trekpng1.png"><h4>Slash 9.9 XX1 Flifht Attendant</h4><h5>$122,999.00</h5></a>
-  </div>
-  <div class="col-xs-12 col-md-4">
-      <a href=""><img src="images/trekpng2.png"><h4>Slash 9.7</h4><h5>82,999.00</h5></a>
-  </div>
-  <div class="col-xs-12 col-md-4">
-      <a href=""><img src="images/trekpng3.png"><h4>Slash 8</h4><h5>75,999.00</h5></a>
-  </div>
-  </div>
-</section>
-<div>
-  <img src="/images/fondo2.webp" width="100%">   
-</div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" align="center" data-bs-interval="3000">
+          <img src="/images/trek1.webp" alt="carousel-item"style="width:100%;">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+
+        <div class="carousel-item" align="center"data-bs-interval="3000">
+          <img src="/images/trek3.jfif" alt="carousel-item"style="width:100%;">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+
+        <div class="carousel-item" align="center"data-bs-interval="3000">
+          <img src="/images/trek6.webp" alt="carousel-item"style="width:100%;">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon"aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 <div>
   <figure class="text-center">
     <blockquote class="blockquote">
@@ -166,6 +224,8 @@
           <li><a href="/ropa.html">Ropa</a></li>
           <li><a href="">Accesorios</a></li>
           <li><a href="/servicio.html">Refacciones</a></li>
+          <li><a href="/crud.html">Crud</a></li>
+
         </ul>
       </div>
 
@@ -203,4 +263,9 @@
   <p class="copyright-text">Copyright &copy; 2023 Desarrollado por alumnos de la Universidad Tecnologica De Nayarit 
   </p>
 </footer>
+    <script src="./catalogo.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="/main.js" type="module"></script>
+</body>
+
 </html>

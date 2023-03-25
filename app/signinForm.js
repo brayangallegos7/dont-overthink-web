@@ -22,7 +22,7 @@ signInForm.addEventListener("submit", async (e) => {
     // window.location.href("./index.html");
     // sessionStorage.setItem('email', userCredentials.user.email);
     // sessionStorage.setItem('accesToken', userCredentials.user.accessToken);
-    setTimeout(()=> location.href="./index.html",1500);
+    setTimeout(()=> location.href="./index.html",1000);
   } catch (error) {
     if (error.code === 'auth/wrong-password') {
       showMessage("Contraseña incorrecta", "error")

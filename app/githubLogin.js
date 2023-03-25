@@ -14,11 +14,13 @@ githubButton.addEventListener("click", async (e) => {
     console.log("google sign in");
     
     // Close the login modal
-    const modalInstance = bootstrap.Modal.getInstance(githubButton.closest('.modal'));
-    modalInstance.hide();
+    // const modalInstance = bootstrap.Modal.getInstance(githubButton.closest('.modal'));
+    // modalInstance.hide();
+    
 
     // show welcome message
-    showMessage("Welcome " + credentials.user.displayName);
+    showMessage("¡Bienvenido! " + credentials.user.displayName);
+    setTimeout(()=> location.href="./index.html",1000);
   } catch (error) {
     console.log(error);
   }
