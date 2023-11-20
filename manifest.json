@@ -1,0 +1,17 @@
+{
+    "lang": "es-mx",
+    "name": "Website Don´t Overthink",
+    "short_name": "Don´t Overthink",
+    "description": "Pagina web de salud mental",
+    "start_url": "/",
+    "background_color": "#2f3f58",
+    "theme_color": "#2f3f58",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/images/logoportada.png",
+            "sizes": "512x512"
+        }
+    ]
+}

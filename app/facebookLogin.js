@@ -1,4 +1,4 @@
-import { FacebookAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js"
+import { FacebookAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 import { auth } from "./firebase.js";
 import { showMessage } from "./showMessage.js";
 

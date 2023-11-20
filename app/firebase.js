@@ -1,15 +1,16 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js"
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js"
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js"
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"
 
 
 const firebaseConfig = {
-      apiKey: "AIzaSyBIcSJwvMk8Sk3cJCwZWeqTf5JxNs7YNBk",
-      authDomain: "thebikeshop-8792a.firebaseapp.com",
-      projectId: "thebikeshop-8792a",
-      storageBucket: "thebikeshop-8792a.appspot.com",
-      messagingSenderId: "161316754472",
-      appId: "1:161316754472:web:efffb63252e7b09c10511d"
+      apiKey: "AIzaSyCGZuYQCyY1_oucidjSZ-UJlkaIe7IhsRs",
+      authDomain: "dont-overthink.firebaseapp.com",
+      projectId: "dont-overthink",
+      storageBucket: "dont-overthink.appspot.com",
+      messagingSenderId: "301855302207",
+      appId: "1:301855302207:web:d1da5eeca420be0146ce8a",
+      measurementId: "G-MSE475B0HM"
 };
 
 // Initialize Firebase
