@@ -1,10 +1,10 @@
 @font-face{
   font-family: 'juego';
-  src: url(/fuentes/Madness\ Hyperactive.otf);
+  src: url(/fonts/juego.otf);
 }
 @font-face{
   font-family: 'banana';
-  src: url(/fuentes/Banana.otf);
+  src: url(/fonts/Banana.otf);
 }
 body{
   background-color: #F5f5f5;
@@ -29,7 +29,7 @@ height: 40vw;
   height: 40vw;
 }
 .divanuncios3{
-  height: 42vw;
+  height: 40vw;
 }
 .divanuncios4{
   height: 40vw;
@@ -72,14 +72,14 @@ height: 40vw;
 .div5{
   float: left;
   background-color:#bfa1ff;
-  height:40vw;
+  height:45vw;
   width: 50%;
  
 }
 .div6{
   float: right;
   background-color:#bfa1ff;
-  height:40vw;
+  height:45vw;
   width: 50%;
 
  
@@ -104,6 +104,19 @@ height: 40vw;
   margin-right: 17%;
   margin-top: 8%;
   width: 24vw;
+  animation: zoom 2s infinite;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .titulo2{
   text-align: center;
@@ -142,18 +155,71 @@ height: 40vw;
 .personaje0{
   display: block;
   margin: auto;
+  width: 1vw;
+  animation-name: logoAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: initial;
+  
   width: 15vw;
 }
+
+@keyframes logoAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-10vw);
+  }
+  20%,80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(10vw);}
+}
+
+
 .personaje{
   display: block;
   margin: auto;
   width: 45vw;
+  animation: zoom 10s infinite;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+  
 }
 .personaje2{
   display:block;
   margin:auto;
   height: 45vw;
   width: 45vw;
+  animation: zoom 10s infinite;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .tiendas{
   display: block;
@@ -188,12 +254,12 @@ img {
   max-width: 100%;
   }
   
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 50px) {
   div {
-    width: calc(100% - 50px);
+    width: calc(100% - 2.6vw);
   }
   img{
-    width: calc(100% - 50px);
+    width: calc(100% - 2.6vw);
   }
 
 }
@@ -265,7 +331,7 @@ img {
   margin-left:6px;
   margin-right:0;
   border-radius:100%;
-  background-color:#33353d
+  background-color:#33353d;
 }
 .copyright-text
 {
@@ -359,4 +425,24 @@ img {
     margin-right:0;
     font-weight:600
   }
+}
+.map{
+  width: 100%;
+  height: 45vw;
+}
+.logomaps{
+  margin: 1vw;
+  width: 25vw;
+  height: 5vw;
+}
+.logopersonaje{
+  position: absolute;
+  left: 90%;
+  width: 7vw;
+  height: 7vw;
+}
+.divmaps{
+  background-color: #26272b;
+  width: 100%;
+  height: 7vw;
 }

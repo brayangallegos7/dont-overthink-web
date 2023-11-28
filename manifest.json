@@ -1,17 +1,25 @@
 {
-    "lang": "es-mx",
-    "name": "Website Don´t Overthink",
+    
+    "name": "Don´t Overthink Website",
     "short_name": "Don´t Overthink",
-    "description": "Pagina web de salud mental",
-    "start_url": "/",
-    "background_color": "#2f3f58",
-    "theme_color": "#2f3f58",
-    "orientation": "any",
+    "description": "Juego inpirado en salúd mental",
+    "start_url": "/index.html",
     "display": "standalone",
+    "background_color": "#2091F9",
+    "theme_color": "#317EFB",
     "icons": [
-        {
-            "src": "/images/logoportada.png",
-            "sizes": "512x512"
-        }
-    ]
-}
+      {
+        "src": "./icons/icono1.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "./icons/icono2.png",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "any maskable"
+      }
+    ]
+  }
+  
